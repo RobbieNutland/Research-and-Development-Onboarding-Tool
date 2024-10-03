@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html class="gt" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>The R&ampD Onboarding Tool</title>
+    
+    <script src="../Shared%20Assets/TinyMCE_5.10.7/tinymce.min.js" referrerpolicy="origin"></script>
+    
+    <script type="text/javascript">        
+        tinymce.init({
+            selector: '#editor',
+            width: "100%",
+            height: "100%",
+            resize: false,
+            plugins: 'save print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern help',
+            toolbar1: 'undo redo | fontselect | fontsizeselect | scrolltext | bold italic strikethrough | forecolor backcolor | bodycolour',
+            toolbar2: 'alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | removeformat | link ',
+            toolbar3: 'save'
+        });
+
+        function showEditor() {
+            bgPage.style.visibility="visible";
+            editorContainer.style.visibility="visible";
+            tinymce.activeEditor.dom.addStyle(document.getElementsByTagName("style")[0].innerHTML);
+            tinymce.activeEditor.setContent(editableContent.innerHTML);
+        }
+
+        function hideEditor() {
+            bgPage.style.visibility="hidden"; 
+            editorContainer.style.visibility="hidden"; 
+        }
+    </script>
+
+    <style>
+
+        html.gt {
+            /*background-color: red;*/
+            margin: 0px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            overflow: hidden;
+        }
+
+        body.gt {
+            /*background-color: red;*/
+            margin: 0px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin: 0px;
+            position: relative;
+            color: #4f2d7f;
+            font-family: 'GT Walsheim Pro';
+            font-size: 22pt;
+            font-weight: 700;
+            z-index: 1;
+        }
+
+        h3 {
+            margin: 0px;
+            position: relative;
+            color: #404040;
+            font-family: 'GT Walsheim Pro';
+            font-size: 12pt;
+            font-weight: 700;
+            z-index: 1;
+        }
+
+        p {
+            margin: 0px;
+            position: relative;
+            font-size: 12pt;
+            color: #404040;
+            font-family: 'GT Walsheim Pro Light';
+            z-index: 1;
+        }
+
+        li {
+            margin: 0px 0px 20px;
+            position: relative;
+            font-size: 12pt;
+            color: #404040;
+            font-family: 'GT Walsheim Pro Light';
+            z-index: 1;
+        }
+
+        div.documentHeader {
+            /*background-color: red;*/
+            margin: 0px;
+            position: relative;
+            width: 100%;
+            height: 65px;
+            overflow: hidden;
+        }
+
+        div.runtimeRequirementsContainer {
+            /*background-color: blue;*/
+            margin: 0px;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 135px;
+            height: 55px;
+            overflow: hidden;
+        }
+
+        img.fillParent {
+            width: 100%;
+            height: 100%;
+        }
+
+        div.runtimeRequirementsContent {
+            /*background-color: green;*/
+            margin: 0px;
+            position: absolute;
+            left: 0px;
+            right: 15px;
+            height: 55px;
+            overflow: hidden;
+        }
+
+        div.runtimeRequirementsText {
+            /*background-color: grey;*/
+            margin: 0px;
+            display: table-cell;
+            color: white;
+            font-family: 'GT Walsheim Pro Light';
+            font-size: 12pt;
+            font-weight: normal;
+            text-align: center;
+            vertical-align: middle;
+            width: 100%;
+            height: 55px;
+        }
+
+        div.version {
+            position: absolute;
+            top: 5px;
+            right: 95px;
+            font-size: 8pt;
+            color: #404040;
+            text-align: right;
+            font-family: 'GT Walsheim Pro Light';
+        }
+
+        div.feedback {
+            position: absolute;
+            top: 5px;
+            right: 16px;
+            font-size: 8pt;
+            color: #00aab9;
+            text-decoration: underline;
+            text-align: right;
+            font-family: 'GT Walsheim Pro Light';
+        }
+
+        div.bannerContainer {
+            margin: 0px;
+            position: absolute;
+            top: 5px;
+            left: 150px;
+            right: 16px;
+            height: 55px;
+        }
+
+        img.banner {
+            /*background-color: grey;*/
+            margin: auto;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            top: 0px;
+            width: 100%;
+            max-width: 508px;
+        }
+
+        div.leftContainer {
+            /*background-color: blue;*/
+            margin: 0px;
+            position: absolute;
+            top: 65px;
+            left: 0px;
+            right: 50%;
+            bottom: 0px;
+            overflow: hidden;
+        }
+
+        div.leftPage {
+            /*background-color: green;*/
+            margin: 0px;
+            position: absolute;
+            top: 5px;
+            left: 16px;
+            right: 8px;
+            bottom: 5px;
+            overflow: hidden;
+        }
+
+        div.leftTopAndBottom {
+            /*background-color: white;*/
+            margin: 0px;
+            position: relative;
+            width: 100%;
+            height: 33.33%;
+            overflow: hidden;
+        }
+
+        div.leftMiddle {
+            /*background-color: green;*/
+            margin: 0px;
+            position: relative;
+            width: 100%;
+            height: 33.34%;
+            overflow: hidden;
+        }
+
+        div.leftContentTop {
+            background-color: white;
+            border: 2px solid #4f2d7f;
+            border-radius: 25px;
+            margin: 0px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 2px;
+            overflow: hidden;
+        }
+
+        div.leftContentMiddle {
+            background-color: white;
+            border: 2px solid #4f2d7f;
+            border-radius: 25px;
+            margin: 0px;
+            position: absolute;
+            top: 1px;
+            left: 0px;
+            right: 0px;
+            bottom: 1px;
+            overflow: hidden;
+        }
+
+        div.leftContentBottom {
+            background-color: white;
+            border: 2px solid #4f2d7f;
+            border-radius: 25px;
+            margin: 0px;
+            position: absolute;
+            top: 2px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            overflow: hidden;
+        }
+
+        div.leftContentBody {
+            /*background-color: green;*/
+            margin: 0px;
+            position: absolute;
+            top: 5px;
+            left: 15px;
+            right: 15px;
+            margin: 0px;
+            text-align: left;
+        }
+
+        img.leftContentOverlay {
+            margin: 0px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        img.leftContentBackground {
+            position: relative;
+            width: 100%;
+            z-index: 0;
+        }
+
+        div.rightContainer {
+            /*background-color: green;*/
+            margin: 0px;
+            position: absolute;
+            top: 65px;
+            left: 50%;
+            right: 0px;
+            bottom: 0px;
+            overflow: hidden;
+        }
+
+        div.rightPage {
+            background-color: white;
+            margin: 0px;
+            position: absolute;
+            top: 5px;
+            left: 8px;
+            right: 16px;
+            bottom: 5px;
+            overflow: hidden;
+        }
+
+        div.rightContent {
+            background-color: white;
+            border: 2px solid #4f2d7f;
+            border-radius: 25px;
+            margin: 0px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            overflow: hidden;
+        }
+
+        div.questionIcon {
+            /*background-color: green;*/
+            margin: 0px;
+            position: absolute;
+            top: 5px;
+            right: 160px;
+            width: 35px;
+            height: 35px;
+            overflow: hidden;
+        }
+
+        div.houseIcon {
+            /*background-color: blue;*/
+            margin: 0px;
+            position: absolute;
+            top: 5px;
+            right: 115px;
+            width: 35px;
+            height: 35px;
+            overflow: hidden;
+        }
+
+        div.pencilIcon {
+            /*background-color: green;*/
+            margin: 0px;
+            position: absolute;
+            top: 5px;
+            right: 70px;
+            width: 35px;
+            height: 35px;
+            overflow: hidden;
+        }
+
+        div.speakerIcon {
+            /*background-color: blue;*/
+            margin: 0px;
+            position: absolute;
+            top: 5px;
+            right: 25px;
+            width: 35px;
+            height: 35px;
+            overflow: hidden;
+        }
+
+        div.rightBody {
+            position: absolute;
+            top: 45px;
+            left: 16px;
+            right: 16px;
+            bottom: 30px;
+        }
+
+        div.rightBodyTable {
+            display: table;
+            width: 100%;
+            height: 100%;
+        }
+
+        div.rightBodyTableHeader {
+            display: table-header-group;
+        }
+
+        div.rightDividerLineContainer {
+            /*background-color: blue;*/
+            margin: 0px;
+            position: relative;
+            top: 0px;
+            height: 2px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        div.rightDividerLine {
+            background-color: #4f2d7f;
+            margin: 0px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 17px;
+            bottom: 0px;
+            overflow: hidden;
+        }
+
+        div.rightDividerCircleContainer {
+            /*background-color: blue;*/
+            margin: 0px;
+            position: relative;
+            top: -10px;
+            height: 10px; /* sets the margin after the divider line */
+            left: 100%;
+        }
+
+        div.rightDividerCircle {
+            /*background-color: blue;*/
+            border: 6px solid #4f2d7f;
+            border-radius: 50px;
+            margin: 0px;
+            position: relative;
+            top: 0px;
+            width: 5px;
+            height: 5px;
+            right: 17px;
+        }
+
+        div.rightBodyTableBody {
+            display: table-row-group;
+        }
+
+        div.rightBodyTableBodyRow {
+            display: table-row;
+        }
+
+        div.rightBodyTableBodyCell {
+            display: table-cell;
+        }
+
+        div.rightBodyTableBodyCellInterior {
+            margin: 0px;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+        }
+
+        div.nextPage {
+            /*background-color: blue;*/
+            margin: 0px;
+            position: absolute;
+            right: 21px;
+            bottom: 5px;
+            width: auto;
+            height: auto;
+            overflow: hidden;
+        }
+
+        a.nextPage {
+            text-align: right;
+            font-size: 12pt;
+            color: #00aab9;
+            text-decoration: underline;
+            font-family: 'GT Walsheim Pro Light';
+        }
+
+        div.backdrop {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            height: 65%;
+            width: 65%;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        img.backdrop {
+            height: 100%;
+            width: auto;
+        }
+
+        div.bgPage {
+            background-color: #00aab9;
+            margin: 0px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            z-index: 2;
+            opacity: 0.9;
+            visibility: hidden;
+        }
+
+        div.editorContainer {
+            background-color: #CAC4BB;
+            border: 2px solid #FFFFFF;
+            /* border-radius: 25px; */
+            margin: 0px;
+            position: absolute;
+            top: 5%;
+            left: 20%;
+            right: 20%;
+            bottom: 5%;
+            z-index: 2;
+            visibility: hidden;
+        }
+
+        div.editorTitle {
+            /* border-bottom: 1px solid #404040; */
+            margin: auto;
+            position: absolute;
+            width: 100%;
+            height: 23px;
+            padding-top: 2px;
+            text-align: center;
+            color: #404040;
+            font-family: 'GT Walsheim Pro';
+            font-size: 12pt;
+            font-weight: 700;
+        }
+
+        div.close {
+            background-color: #CAC4BB;
+            border: 2px solid white;
+            border-radius: 25px;
+            margin: 0px;
+            position: absolute;
+            top: 3px;
+            right: 15px;
+            width: 15px;
+            height: 15px;
+            color: #404040;
+        }
+
+        div.close:hover{
+            background-color: red;
+            color: white;
+        }
+
+        p.close {
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            line-height: 0px;
+            margin-top: 6px;
+            margin-left: 4px;
+            color: inherit;
+            font-family: 'GT Walsheim Pro';
+            font-size: 12pt;
+            font-weight: 300;
+        }
+
+        form.editor {
+            margin: 0px;
+            position: absolute;
+            top: 25px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        textarea.editor {
+            margin: 0px;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="gt">
+    <div class="documentHeader">
+        <div class="runtimeRequirementsContainer">
+            <img class="fillParent" src="../Shared%20Assets/Info.png" alt="" />
+        </div>
+        <div class="runtimeRequirementsContainer">
+            <div class="runtimeRequirementsContent">
+                <div class="runtimeRequirementsText">Runtime Requirements</div>
+            </div>
+        </div>
+        <div class="version">Version: 0.2 |</div>
+        <div class="feedback">Leave Feedback</div>
+        <div class="bannerContainer">
+            <img class="banner" src="../Shared%20Assets/Banner.png" alt="" />
+        </div>
+    </div>
+    <div class="leftContainer">
+        <div class="leftPage">
+            <div class="leftTopAndBottom">
+                <a href="https://grantthorntonuk.sharepoint.com/sites/NewJoinerOrientation301/SitePages/Our%20Teams%20%26%20How%20We%20Work/Our%20Teams%20%26%20How%20We%20Work.aspx#pageJump">
+                    <div class="leftContentTop">
+                        <img class="leftContentOverlay" src="./Overlay.png" alt="" />
+                        <div class="leftContentBody">
+                            <h3>1. Our teams and how we work</h3>
+                            <p>Understanding who we are and what systems we use when undertaking R&amp;D claims.</p>
+                            <img class="leftContentBackground" src="./Section01.png" alt="" />
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="leftMiddle">
+                <a href="https://grantthorntonuk.sharepoint.com/sites/NewJoinerOrientation301/SitePages/What%20is%20R&D%20Tax%20Relief/What%20is%20R&D%20Tax%20Relief.aspx#pageJump">
+                    <div class="leftContentMiddle">
+                        <img class="leftContentOverlay" src="./Overlay.png" alt="" />
+                        <div class="leftContentBody">
+                            <h3>2. What is R&amp;D tax relief?</h3>
+                            <p>Understanding key criteria, the boundaries of R&amp;D, and the different types of R&amp;D relief.</p>
+                            <img class="leftContentBackground" src="./Section02.png" alt="" />
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="leftTopAndBottom">
+                <a href="https://grantthorntonuk.sharepoint.com/sites/NewJoinerOrientation301/SitePages/The%20R&D%20Process/The%20R&D%20Process.aspx#pageJump">
+                    <div class="leftContentBottom">
+                        <img class="leftContentOverlay" src="./Overlay.png" alt="" />
+                        <div class="leftContentBody">
+                            <h3>3. The R&amp;D process</h3>
+                            <p>Understanding the many stages of an R&amp;D claim and what is required of the team at each stage.</p>
+                            <img class="leftContentBackground" src="../Shared%20Assets/Cycle/Proposal.png" alt="" />
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="rightContainer">
+        <div class="rightPage">
+            <div class="rightContent">
+                <div class="questionIcon">
+                    <img class="fillParent" src="../Shared%20Assets/Question.png" alt="" onmouseover="this.src='../Shared%20Assets/Question_Hover.png';" onmouseout="this.src='../Shared%20Assets/Question.png';" />
+                </div>
+                <div class="houseIcon">
+                    <img class="fillParent" src="../Shared%20Assets/House.png" alt="" onmouseover="this.src='../Shared%20Assets/House_Hover.png';" onmouseout="this.src='../Shared%20Assets/House.png';" />
+                </div>
+                <div class="pencilIcon">
+                    <img class="fillParent" src="../Shared%20Assets/Pencil.png" alt="" onmouseover="this.src='../Shared%20Assets/Pencil_Hover.png';" onmouseout="this.src='../Shared%20Assets/Pencil.png';" onclick="showEditor()" />
+                </div>
+                <div class="speakerIcon">
+                    <img class="fillParent" src="../Shared%20Assets/Speaker.png" alt="" onmouseover="this.src='../Shared%20Assets/Speaker_Hover.png';" onmouseout="this.src='../Shared%20Assets/Speaker.png';" />
+                </div>
+                <div class="rightBody">
+                    <div class="rightBodyTable">
+                        <div class="rightBodyTableHeader">
+                            <h1>Grant Thornton R&amp;D Onboarding Tool</h1>
+                            <div class="rightDividerLineContainer">
+                                <div class="rightDividerLine">
+                                </div>
+                            </div>
+                            <div class="rightDividerCircleContainer">
+                                <div class="rightDividerCircle">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rightBodyTableBody">
+                            <div class="rightBodyTableBodyRow">
+                                <div class="rightBodyTableBodyCell">
+                                    <div class="rightBodyTableBodyCellInterior" id="editableContent">
+                                        <p>Welcome to the Grant Thornton R&amp;D Onboarding Tool! This guide is intended to help new team members get familiar with our processes.<br /><br /> Throughout this guide, four icons will remain consistent. These being:<br /></p>
+                                        <ul>
+                                            <li>
+                                                <b>The question mark icon: </b>Lost your way around the system? Click the question mark icon on any page for help on how to navigate the system.
+                                            </li>
+                                            <li>
+                                                <b>The home icon: </b>Click the home icon on any page to return to this homepage where you can pick a new journey.
+                                            </li>
+                                            <li>
+                                                <b>The pencil icon: </b>Looking to update the contents of a page? Provided you have administrator privileges, you can click the pencil and begin making changes.
+                                            </li>
+                                            <li>
+                                                <b>The speaker icon: </b>The default contents of each page can be narrated by clicking the speaker icon.
+                                            </li>
+                                        </ul>
+                                        <p>To get started, click the &lsquo;Next&rsquo; link below, or to jump to a specific section, select from the boxes on the left.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nextPage">
+                    <a class="nextPage" href="https://grantthorntonuk.sharepoint.com/sites/NewJoinerOrientation301/SitePages/Our%20Teams%20&%20How%20We%20Work/Our%20Teams%20&%20How%20We%20Work.aspx#pageJump">Next</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="backdrop">
+        <img class="backdrop" src="../Shared%20Assets/Backdrop.png" alt="" />
+    </div>
+    <div class="bgPage" id="bgPage"></div>
+    <div class="editorContainer" id="editorContainer">
+        <div class="editorTitle">Page Editor</div>
+        <div class="close" onclick="hideEditor()">
+            <p class="close">x</p>
+        </div>
+        <form class="editor" method="post">
+            <textarea class="editor" id="editor">Hello, World!</textarea>
+        </form>
+    </div>
+</body>
+</html>

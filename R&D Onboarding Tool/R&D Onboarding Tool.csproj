@@ -1,0 +1,421 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
+    <RootNamespace>R_D_Onboarding_Tool</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <SupportedOSPlatformVersion>10.0.22621.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Resources\Shared Assets\Fonts\GT Walsheim Pro\GT-Walsheim-Pro-Bold-Oblique.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Fonts\GT Walsheim Pro\GT-Walsheim-Pro-Bold.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Fonts\GT Walsheim Pro\GT-Walsheim-Pro-Light-Oblique.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Fonts\GT Walsheim Pro\GT-Walsheim-Pro-Light.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Fonts\GT Walsheim Pro\GT-Walsheim-Pro-Medium-Oblique.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Fonts\GT Walsheim Pro\GT-Walsheim-Pro-Medium.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Fonts\GT Walsheim Pro\GT-Walsheim-Pro-Regular-Oblique.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Fonts\GT Walsheim Pro\GT-Walsheim-Pro-Regular.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\ClientOnboarding.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Defence.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Client_Onboarding-Client_Onboarding.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Client_Onboarding-Idle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Client_Onboarding-Kick-Off.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Client_Onboarding-Proposal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Defence-Defence.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Defence-Idle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Defence-Next_Steps.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Defence-Submission.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Kick-Off-Client_Onboarding.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Kick-Off-Idle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Kick-Off-Kick-Off.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Kick-Off-Report_Preparation.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Next_Steps-Defence.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Next_Steps-Idle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Next_Steps-Next_Steps.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Next_Steps-Proposal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Proposal-Client_Onboarding.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Proposal-Idle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Proposal-Next_Steps.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Proposal-Proposal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Report_Preparation-Idle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Report_Preparation-Kick-Off.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Report_Preparation-Report_Preparation.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Report_Preparation-Submission.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Submission-Defence.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Submission-Idle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Submission-Report_Preparation.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Half-Cycle_Submission-Submission.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Idle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Kick-Off.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\NextSteps.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Proposal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\ReportPreparation.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Return01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Return02.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Cycle\Submission.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Backdrop.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Banner.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\House.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\House_Hover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Info.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Pencil.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Pencil_Hover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Question.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Question_Hover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Speaker.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\Speaker_Hover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\langs\README.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\skins\ui\oxide-dark\fonts\tinymce-mobile.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\skins\ui\oxide\fonts\tinymce-mobile.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\The R&amp;D Onboarding Tool\Overlay.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\The R&amp;D Onboarding Tool\Section01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\The R&amp;D Onboarding Tool\Section02.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\The R&amp;D Onboarding Tool\Section03.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\icons\default\icons.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\jquery.tinymce.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\license.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\advlist\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\anchor\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\autolink\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\autoresize\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\autosave\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\bbcode\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\charmap\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\codesample\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\code\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\colorpicker\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\contextmenu\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\directionality\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\emoticons\js\emojiimages.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\emoticons\js\emojiimages.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\emoticons\js\emojis.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\emoticons\js\emojis.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\emoticons\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\fullpage\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\fullscreen\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\help\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\hr\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\imagetools\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\image\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\importcss\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\insertdatetime\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\legacyoutput\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\link\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\lists\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\media\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\nonbreaking\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\noneditable\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\pagebreak\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\paste\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\preview\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\print\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\quickbars\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\save\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\searchreplace\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\spellchecker\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\tabfocus\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\table\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\template\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\textcolor\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\textpattern\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\toc\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\visualblocks\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\visualchars\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\plugins\wordcount\plugin.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\skins\content\dark\content.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\skins\content\default\content.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\skins\content\document\content.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\skins\content\writer\content.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\skins\ui\oxide-dark\content.inline.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\skins\ui\oxide-dark\content.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\skins\ui\oxide-dark\content.mobile.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\skins\ui\oxide-dark\skin.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\skins\ui\oxide-dark\skin.mobile.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\skins\ui\oxide-dark\skin.shadowdom.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\skins\ui\oxide\content.inline.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\skins\ui\oxide\content.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\skins\ui\oxide\content.mobile.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\skins\ui\oxide\skin.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\skins\ui\oxide\skin.mobile.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\skins\ui\oxide\skin.shadowdom.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\themes\mobile\theme.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\themes\silver\theme.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\tinymce.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shared Assets\TinyMCE_5.10.7\tinymce.d.ts">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Resources\The R&amp;D Onboarding Tool\The R&amp;D Onboarding Tool.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

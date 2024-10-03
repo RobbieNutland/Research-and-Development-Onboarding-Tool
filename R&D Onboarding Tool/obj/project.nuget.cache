@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "2hd3QDQ9pHw=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Rob\\source\\repos\\R&D_Onboarding_Tool\\R&D Onboarding Tool\\R&D Onboarding Tool.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rob\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.22621.34\\microsoft.windows.sdk.net.ref.10.0.22621.34.nupkg.sha512"
+  ],
+  "logs": []
+}
